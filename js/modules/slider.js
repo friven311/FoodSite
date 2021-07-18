@@ -20,7 +20,7 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
         } else {
             current.textContent =  slideIndex;
         }
-    };
+    }
 
     if (slides.length < 10) {
         total.textContent = `0${slides.length}`;
@@ -56,12 +56,12 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
         }
         indicators.append(dot);
         dots.push(dot);
-    };
+    }
 
     function sliderDots() {
         dots.forEach(dot => dot.style.opacity = '.5');
         dots[slideIndex-1].style.opacity = 1;
-    };
+    }
 
     function nextButCutPx() {
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
@@ -95,7 +95,7 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
         }
 
         slideChecker ();
-        sliderDots()
+        sliderDots();
     });
 
     prev.addEventListener('click', () => {
